@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алиса Смирнова](https://up.htmlacademy.ru/adaptive/13/user/296487).
-* Наставник: `Неизвестно`.
+* Наставник: `Артем Иванец`.
 
 ---
 
