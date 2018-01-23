@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-img" src="" alt="Mishka">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a>Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a>Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a>Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a>Корзина:пока пуста</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="promo">
+      <div class="promo__wrapper">
+        <h2 class="promo__title">Вязание на заказ</h2>
+      </div>
+    </section>
+    <div class="form-preview">
+      <p class="form-preview__descr">Мы будем рады воплотить в жизнь ваши пожелания!
+        Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+    </div>
+    <form class="form-main" enctype="text/plain" method="get" action="https://echo.htmlacademy.ru">
+    <div class="form-main__wrapper">
+      <section class="form-main__block">
+        <h3 class="form-main__title">Тип</h3>
+          <label class="radio-block">
+            <span class="radio-block__text">Аксессуар для интерьера</span>
+            <input class="radio-block__input" aria-label="Аксессуар для интерьера" type="radio" >
+          </label>
+          <label class="radio-block">
+            <span class="radio-block__text">Детская игрушка</span>
+            <input class="radio-block__input" aria-label="Детская игрушка" type="radio" >
+          </label>
+      </section>
+      <section class="form-main__block">
+        <h3 class="form-main__title">Цвет</h3>
+        <label class="checkbox-block" for="form-main__chec1">
+          <span class="checkbox-block__text">Белый</span>
+          <input class="checkbox-block__input" aria-label="Белый цвет" type="checkbox" id="form-main__chec1" checked>
+        </label>
+        <label class="checkbox-block" for="form-main__chec2">
+          <span class="checkbox-block__text">Серый</span>
+          <input class="checkbox-block__input" aria-label="Серый цвет" type="checkbox" id="form-main__chec2" checked>
+        </label>
+        <label class="checkbox-block" for="form-main__chec3">
+          <span class="checkbox-block__text">«Тиффани»</span>
+          <input class="checkbox-block__input" aria-label="Цвет «Тиффани»" type="checkbox" id="form-main__chec3">
+        </label>
+        <label class="checkbox-block" for="form-main__chec4">
+          <span class="checkbox-block__text">Черный</span>
+          <input class="checkbox-block__input" aria-label="Черный цвет" type="checkbox" id="form-main__chec4">
+        </label>
+        <label class="checkbox-block" for="form-main__chec5">
+          <span class="checkbox-block__text">Розовый</span>
+          <input class="checkbox-block__input" aria-label="Розовый цвет" type="checkbox" id="form-main__chec5">
+        </label>
+        <label class="checkbox-block" for="form-main__chec6">
+          <span class="checkbox-block__text">Оранжевый</span>
+          <input class="checkbox-block__input" aria-label="Оранжевый цвет" type="checkbox" id="form-main__chec6">
+        </label>
+      </section>
+      <section class="form-main__block">
+        <h3 class="form-main__title">ФИО</h3>
+        <label class="text-block">
+          <span class="text-block__text">Имя:</span>
+          <input class="text-block__input" aria-label="Имя" type="text" value="Введите ваше имя*" >
+        </label>
+        <label class="text-block">
+          <span class="text-block__text">Фамилия:</span>
+          <input class="text-block__input" aria-label="Фамилия" type="text" value="Укажите фамилию*">
+        </label>
+        <label class="text-block">
+          <span class="text-block__text">Отчетсво:</span>
+          <input class="text-block__input" aria-label="Отчество" type="text" value="Отчество, если желаете">
+        </label>
+      </section>
+      <section class="form-main__contacts">
+        <h3 class="form-main__title">Тел</h3>
+        <label class="text-block">
+          <span class="visually-hidden">Телефон</span>
+          <input class="text-block__input" aria-label="Телефон" type="number" value="+7 ХХХ ХХ ХХ*" >
+        </label>
+        <h3 class="form-main__title">E-mail</h3>
+        <label class="text-block" >
+          <span class="visually-hidden">E-mail</span>
+          <input class="text-block__input" aria-label="E-mail" type="email" value="Ваш Email*" >
+        </label>
+      </section>
+      <section class="form-main__additive">
+        <h3 class="form-main__title">Доп</h3>
+        <label class="textarea-block">
+          <span class="visually-hidden">Дополнительная информация</span>
+          <textarea class="textarea-block__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </label>
+      </section>
+      <span class="form-main__notation">*Поля обязательны для заполнения</span>
+      <a class="form-main__post button" href="#">Отправить заказ</a>
+    </div>
+    </form>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__social social">
+      <ul class="social-list">
+        <li class="social__item"><a class="social-link social-link--instagram" href="#" aria-label="Мы в Инстаграме"></a></li>
+        <li class="social__item"><a class="social-link social-link--facebbook" href="#" aria-label="Мы в Фейсбуке"></a></li>
+        <li class="social__item"><a class="social-link social-link--twitter" href="#" aria-label="Мы в Твиттере"></a></li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано:</b>
+      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="copyright__logo" src="">
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
