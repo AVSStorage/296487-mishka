@@ -1,33 +1,49 @@
-.modal{
+.modal {
   width: 320px;
   height: 336px;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   border: 1px solid #c6c6c6;
-  &__label{
-    display: block;
-    width: 146px;
-    color: #000000;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 30px;
-    text-transform: uppercase;
+}
+
+.modal__wrapper {
+  display: block;
+}
+
+.modal__label {
+  display: block;
+  width: 146px;
+  color: @black;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.modal__check-size {
+  display: block;
+  color: @gray;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.modal__size {
+  width: 82px;
+  height: 52px;
+  border: 2px solid #ececec;
+  background-color: @white;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: @gray;
+
+  &:focus {
+    border: 2px solid @blue;
   }
-  &__check-size{
-    display: block;
-    color: #444444;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 30px;
-  }
-  &__size{
-    width: 82px;
-    height: 52px;
-    border: 2px solid #444444;
-    background-color: #ffffff;
-    opacity: 0.1;
-  }
-  &__buy{
-    background-color: #63d1bb;
-    color:#ffffff;
-  }
+}
+
+.modal__buy {
+  background-color: @blue;
+  color: @white;
 }

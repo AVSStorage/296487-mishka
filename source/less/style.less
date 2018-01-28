@@ -1,49 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-@import "products-info.less";
-@import "page-header.less";
-@import "main-nav.less";
-@import "product-preview.less";
-@import "advantages.less";
-@import "reviews.less";
-@import "contacts.less";
-@import "page-footer.less";
-@import "modal.less";
-@import "promo.less";
-@import "catalog-item.less";
-@import "production.less";
-@import "form-preview.less";
-@import "radio-block.less";
-@import "checkbox-block.less";
-@import "text-block.less";
-@import "textarea-block.less";
-@import "form-main.less";
+@import "scaffolding.less";
+@import "mixins.less";
+@black:#000000;
+@gray:#444444;
+@white:#ffffff;
+@blue:#63d1bb;
+
 body {
-  color: #000000;
+  color: @black;
   line-height: 24px;
-  background-color: #ffffff;
-  width:320px;
+  background-color: @white;
+  width: 320px;
 }
-.text-in-form(){
-  color: #000000;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 18px;
-}
-.visually-hidden{
+
+.visually-hidden {
   display: none;
-}
-.button {
-  width: 192px;
-  height: 52px;
-  color: #444444;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  text-decoration: none;
-  display: block;
-}
-.button-properties(){
-  border: 2px solid #444444;
-  background-color: #ffffff;
 }
