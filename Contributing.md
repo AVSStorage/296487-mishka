@@ -1,38 +1,42 @@
-# How to contribute
+# Руководство по внесению изменений
 
-Unfortunately we all can't work on cmder every day of the year, so I have decided to write some guidelines for contributing.
+Поддерживайте ваш репозиторий обновлённым. Когда наставник принимает ваш пулреквест, он попадает в репозиторий Академии, но не в ваш форк.
 
-If you follow them your contribution will likely be pulled in quicker.
+#### 1. Не коммитьте ничего самостоятельно в `master` вашего репозитория
 
-## Getting Started
+Это помешает вам аккуратно обновлять ваш репозиторий, могут возникнуть конфликты.
 
-* Fork the repository on GitHub (It's that easy)
-* Create a feature branch based on the development branch.
+#### 2. Прежде чем приступать к новому заданию, обновите `master`
 
-## Making Changes
+Обновить свой репозиторий из репозитория Академии можно так:
 
-* Make changes in your seperate branch.
-* Check for unnecessary whitespace with `git diff --check` before committing.
-* Make sure your commit messages are easy to understand
-* Squash your 'Correcting mistakes' commits if you have a lot of them. (See the 'Squashing Commits' link below)
-* Make sure your changes won't affect new users or user without a customised system, try out your changes on a fresh Windows VM to see if it would affect a new user's experience.
-  * Sometimes a change that helps you with your cmder experience and tools doesn't always mean other people may need/want it.
+```
+# В вашей локальной копии переключитесь в ветку master
+git checkout master
 
-## Making Trivial Changes
+# Заберите изменения из репозитория Академии¹
+git pull academy master
 
-### Documentation
+# Отправьте изменения в ваш форк на Гитхабе
+git push
+```
 
-* If the documentation is about a currently available feature in cmder or correcting already created documentation, you can safely make your changes on the master branch and pull request them onto master.
+¹ В `academy` должна быть ссылка на репозиторий Академии. Если его там нет, добавьте:
 
-## Submitting Changes
+```
+git remote add academy git@github.com:htmlacademy-adaptive/296487-mishka.git
+```
 
-* Push your changes to the branch in your fork of the repository.
-* Submit a pull request to the develop branch of the cmder repository (unless it's a change in documentation [see above]).
-* Make sure you explicitly say to not complete the pull request if you are still making changes.
+Когда вы обновили `master`, создайте ветку для нового задания:
 
+```
+git checkout -b module2-task1
+```
 
-# Additional Resources
+`module2-task1` — это название ветки. Под описанием каждого задания в интерфейсе интенсива для вас будет указано правильное название ветки.
 
-* [Squashing Commits](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)
-* [General GitHub documentation](http://help.github.com/)
-* [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
+--
+
+#### Есть вопрос?
+
+Посмотрите [коллекцию часто задаваемых вопросов по Git](http://firstaidgit.ru).
