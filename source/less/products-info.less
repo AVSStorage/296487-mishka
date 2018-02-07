@@ -1,4 +1,6 @@
 .products-info {
+  display: flex;
+  flex-direction: column;
   color: @white;
   font-size: 19px;
   font-weight: 700;
@@ -8,32 +10,37 @@
 .products-info__item {
   width: 106px;
   display: block;
+  padding: 25px 30px;
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
 }
 
 .products-info__title {
-  color: @black;
   display: block;
   margin: 0;
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
+  text-align: center;
+  padding-top: 150px;
+  color: @black;
 }
 
 .products-info__wrapper {
   display: block;
   width: 320px;
-  height: 303px;
+  min-height: 283px;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: -130px 0;
+  background-position: -125px -15px;
 }
 
 .products-info__link {
-  height: 103px;
+  min-height: 103px;
+  width: 320px;
   display: block;
+  position: relative;
 
   &:first-of-type {
     background-color: @blue;
@@ -45,6 +52,121 @@
 }
 
 .products-info__img {
+  position: absolute;
+  top: 23px;
+  left: 238px;
   opacity: 0.5;
   fill: #149080;
+}
+
+@media (min-width: @tablet-width) {
+  .products-info {
+    width: 768px;
+    min-height: 746px;
+    margin-top: -90px;
+    background-color: #f0f0f0;
+
+    &::after {
+      content: "";
+      width: 1250px;
+      height: 34px;
+      background-image: url("../img/zigzag-tablet.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 820px;
+    }
+  }
+
+  .products-info__wrapper {
+    display: block;
+    width: 768px;
+    min-height: 627px;
+    background-image: none;
+    position: relative;
+  }
+
+  .products-info__title br:first-of-type {
+    display: none;
+  }
+
+  .products-info__block {
+    display: inherit;
+    margin: 0 auto;
+  }
+
+  .products-info__item {
+    padding: 0;
+    padding-top: 27px;
+    padding-left: 37px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .products-info__link {
+    width: 333px;
+    min-height: 119px;
+  }
+
+  .products-info__link:first-of-type .products-info__img {
+    top: 30px;
+    left: 255px;
+  }
+
+  .products-info__link:last-of-type .products-info__img {
+    top: 30px;
+  }
+
+  .products-info__title {
+    padding-top: 154px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products-info {
+    width: 1150px;
+    min-height: 650px;
+    background-color: #f9f9f9;
+    margin-top: -90px;
+
+    &::after {
+      content: "";
+      width: 1250px;
+      height: 34px;
+      background-image: url("../img/zigzag.png");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 820px;
+      left: 35px;
+    }
+  }
+
+  .products-info__link {
+    width: 524px;
+    min-height: 119px;
+  }
+
+  .products-info__block {
+    margin-left: 50px;
+  }
+
+  .products-info__link:first-of-type .products-info__img {
+    left: 448px;
+  }
+
+  .products-info__link:last-of-type .products-info__img {
+    left: 430px;
+  }
+
+  .products-info__title {
+    padding-top: 155px;
+  }
+
+  .products-info__item {
+    padding-left: 34px;
+  }
+
+  .products-info__wrapper {
+    width: 1150px;
+  }
 }

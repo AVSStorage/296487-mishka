@@ -1,7 +1,24 @@
 body {
-  width: 320px;
+  min-width: 320px;
   font-family: "Open Sans", "Arial", sans-serif;
   color: @black;
   line-height: 24px;
   background-color: @white;
+}
+
+.wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper {
+    width: 1150px;
+  }
 }

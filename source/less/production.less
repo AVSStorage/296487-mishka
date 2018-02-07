@@ -1,18 +1,31 @@
+.production {
+  width: 262px;
+  min-height: 503px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+
 .production__title {
   display: block;
   width: 126px;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
-  position: relative;
 }
 
 .production__process-play {
   position: absolute;
+  top: 35px;
+  left: 80px;
 }
 
 .production__preview {
   display: block;
+  padding-top: 15px;
+  padding-left: 33px;
   width: 163px;
   color: @gray;
   font-size: 13px;
@@ -22,4 +35,102 @@
 
 .production__order {
   .button-properties();
+  width: 191px;
+  text-align: center;
+  height: 51px;
+  display: block;
+  margin-left: 32px;
+}
+
+.production__order-text {
+  display: block;
+  padding-top: 18px;
+}
+
+.production__icon {
+  fill: @blue;
+  position: absolute;
+  top: 29px;
+  left: 34px;
+}
+
+@media (min-width: @tablet-width) {
+  .production {
+    display: flex;
+    flex-direction: column;
+    min-height: 744px;
+    margin-left: 0;
+    width: 768px;
+    align-items: center;
+  }
+
+  .production__title {
+    padding: 39px 92px 25px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .production__preview {
+    width: 581px;
+  }
+
+  .production__process-info {
+    order: -1;
+    width: 668px;
+    height: 455px;
+  }
+
+  .production__order {
+    width: 584px;
+  }
+
+  .production__process-play {
+    top: 189px;
+    left: 336px;
+  }
+
+  .production__icon {
+    top: 489px;
+    left: 92px;
+  }
+
+  .production__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 668px;
+    min-height: 288px;
+    border: 1px solid #ececec;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1150px;
+    min-height: 455px;
+  }
+
+  .production__wrapper {
+    width: 372px;
+    min-height: 455px;
+  }
+
+  .production__preview {
+    width: 230px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .production__icon {
+    left: 797px;
+    top: 36px;
+  }
+
+  .production__process-info {
+    width: 682px;
+    height: 455px;
+  }
 }

@@ -1,9 +1,56 @@
-.radio-block {
-  display: block;
-}
+
 
 .radio-block__text {
   font-size: 17px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.radio-block__input {
+  opacity: 0;
+}
+
+.radio-block {
+  display: block;
+  position: relative;
+}
+
+.radio-block__input:checked + .radio-block__text::after {
+  visibility: visible;
+}
+
+@media (min-width: @tablet-width) {
+  .radio-block {
+    padding-left: 200px;
+    padding-bottom: 39px;
+  }
+
+  .radio-block__text::before {
+    content: "";
+    width: 45px;
+    height: 45px;
+    top: -16px;
+    left: 148px;
+    position: absolute;
+    border: 1px solid #000000;
+    border-radius: 50%;
+  }
+
+  .radio-block__text::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    left: 161px;
+    position: absolute;
+    background-color: @blue;
+    border-radius: 50%;
+    visibility: hidden;
+  }
+
+  .radio-block__text {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 18px;
+  }
 }

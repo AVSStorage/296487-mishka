@@ -1,10 +1,20 @@
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-header__wrapper {
   width: 320px;
   height: 79px;
+  position: relative;
 }
 
 .page-header__toggle {
   display: block;
+  position: absolute;
+  top: 35px;
+  left: 270px;
   width: 20px;
   height: 14px;
   font-size: 0;
@@ -12,3 +22,16 @@
   background-color: @white;
   background-image: url("../img/icon-menu-open.svg");
 }
+
+.page-header__logo {
+  display: block;
+  padding: 20px 115px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+  }
+}
+

@@ -1,0 +1,26 @@
+.table {
+  border-collapse: collapse;
+  box-sizing: content-box;
+}
+
+.table tbody {
+  display: flex;
+  flex-direction: column;
+  min-height: 140px;
+}
+
+.table__tr {
+  max-width: 259px;
+  min-height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.table__td {
+  min-width: 93px;
+}
+
+@media (min-width: @desktop-width) {
+  .table__tr {
+    max-width: 294px;
+  }
+}
