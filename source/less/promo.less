@@ -10,14 +10,13 @@
 .promo__wrapper {
   width: 320px;
   height: 175px;
-  background-color: #f1f1f1;
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     margin-top: -90px;
-    width: 768px;
-    min-height: 226px;
+    width: 100%;
+    background-color: #f1f1f1;
   }
 
   .promo__wrapper {
@@ -35,6 +34,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .promo {
+    width: 100%;
+  }
+
   .promo__wrapper {
     width: 1150px;
     min-height: 255px;

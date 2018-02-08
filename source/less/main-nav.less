@@ -1,9 +1,14 @@
 .main-nav {
+  width: 100%;
   color: @black;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
   min-height: 316px;
+}
+
+.main-nav__wrapper {
+  width: 320px;
   position: relative;
 }
 
@@ -14,7 +19,6 @@
 }
 
 .main-nav__item {
-  width: 320px;
   min-height: 79px;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   background-color: #ffffff;
@@ -28,7 +32,6 @@
 }
 
 .main-nav__active {
-  width: 320px;
   min-height: 79px;
   box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   background-color: #ffffff;
@@ -87,6 +90,10 @@
     display: flex;
     min-height: auto;
     background-color: transparent;
+  }
+
+  .main-nav__wrapper {
+    width: 768px;
   }
 
   .main-nav__item {
@@ -164,10 +171,14 @@
   }
 
   .main-nav__shipping {
-    display: block;
-    position: absolute;
-    top: 105px;
-    left: 486px;
+    order: 5;
+    padding-top: 20px;
+    padding-left: 31px;
+    margin-left: auto;
+    background-color: transparent;
+    border-top: 1px solid #ececec;
+    width: 317px;
+    min-height: 89px;
     color: @gray;
     font-size: 15px;
     font-weight: 400;
@@ -180,6 +191,10 @@
     width: 304px;
     min-height: 89px;
     order: 1;
+  }
+
+  .main-nav__wrapper {
+    width: 1150px;
   }
 
   .main-nav__list {

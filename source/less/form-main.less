@@ -1,4 +1,5 @@
 .form-main__title {
+  margin: 0;
   color: @blue;
   font-size: 17px;
   font-weight: 700;
@@ -13,6 +14,41 @@
   line-height: 16px;
 }
 
+.form-main__text {
+  width: 100%;
+}
+
+.form-main__additive {
+  width: 100%;
+}
+
+.form-main__radio {
+  width: 100%;
+}
+
+.form-main__post {
+  order: 1;
+  width: 260px;
+  border: 2px solid #444444;
+  background-color: #ffffff;
+}
+
+.form-main__post-text {
+  display: block;
+  padding-top: 20px;
+  padding-left: 47px;
+  color: @gray;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.form-main__contacts {
+  width: 100%;
+}
+
+
 @media (min-width: @tablet-width) {
   .form-main__checkbox {
     min-height: 304px;
@@ -22,16 +58,9 @@
     min-height: 303px;
   }
 
-  .form-main__contacts {
-    min-height: 228px;
-  }
 
   .form-main__additive {
     min-height: 224px;
-  }
-
-  .form-main__radio {
-    min-height: 188px;
   }
 }
 
@@ -42,6 +71,7 @@
 
   .form-main__checkbox {
     min-height: 228px;
+    background-color: #f1f1f1;
   }
 
   .form-main__text {
@@ -50,10 +80,12 @@
 
   .form-main__contacts {
     min-height: 228px;
+    width: 100%;
+    background-color: #f1f1f1;
   }
 
-  .form-main__additive {
-    min-height: 228px;
+  .form-main__post-text {
+    padding-top: 15px;
+    padding-left: 10px;
   }
 }
-

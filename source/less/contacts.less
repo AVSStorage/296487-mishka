@@ -5,7 +5,6 @@
 .contacts__title {
   margin: 0;
   padding-top: 88px;
-  padding-left: 30px;
   color: @black;
   font-size: 18px;
   font-weight: 700;
@@ -13,7 +12,6 @@
 }
 
 .contacts__info-item {
-  padding-left: 30px;
   padding-top: 26px;
   color: @gray;
   font-size: 15px;
@@ -74,18 +72,13 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    width: 1150px;
-    min-height: 458px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
   }
 
   .contacts__write {
     margin: 0;
     width: 230px;
-    margin-left: 30px;
+
     margin-top: 40px;
   }
 
@@ -99,11 +92,18 @@
   }
 
   .contacts__wrapper {
-    margin-top: 194px;
-    margin-left: 103px;
-    width: 890px;
+    width: 1150px;
+    padding-left: 219px;
+    padding-top: 194px;
+    padding-bottom: 100px;
+    padding-right: 53px;
     min-height: 458px;
     display: flex;
     flex-direction: column;
+  }
+
+  .map__static {
+    width: 525px;
+    height: 457px;
   }
 }

@@ -3,13 +3,22 @@
 }
 
 .text-block {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-block__input {
   .text-in-form();
   color: rgba(0, 0, 0, 0.2);
   border: none;
+  width: 260px;
+  height: 52px;
+  box-shadow: inset 0 -2px 0 #000000;
+  padding-bottom: 10px;
+}
+
+.text__wrapper {
+  width: 320px;
 }
 
 input::placeholder {
@@ -18,8 +27,88 @@ input::placeholder {
 
 @media (min-width: @tablet-width) {
   .text-block__text {
+    padding-right: 20px;
     font-size: 19px;
     font-weight: 700;
     line-height: 18px;
+  }
+
+  .text__wrapper {
+    width: 768px;
+    display: flex;
+    padding-left: 45px;
+  }
+
+  .text-block {
+    display: block;
+  }
+
+  .text-block__input {
+    padding-left: 15px;
+    width: 375px;
+    height: 52px;
+    box-shadow: inset 0 -2px 0 #000000;
+  }
+
+  .name-input {
+    width: 428px;
+  }
+
+  .text-input__wrapper {
+    padding-left: 126px;
+  }
+
+  .number-wrapper {
+    padding-left: 144px;
+  }
+
+  .mail-wrapper {
+    padding-left: 119px;
+  }
+
+  .contacts-input {
+    width: 501px;
+    background-color: #f1f1f1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .text__wrapper {
+    width: 1150px;
+    display: flex;
+    padding-left: 109px;
+  }
+
+  .text-input__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: 68px;
+  }
+
+  .text-block__input {
+    width: 573px;
+    height: 52px;
+    padding-left: 15px;
+    box-shadow: inset 0 -2px 0 #000000;
+  }
+
+  .name-input {
+    width: 626px;
+  }
+
+  .text-block {
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .text-block__text {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 18px;
+    padding-right: 25px;
+  }
+
+  .contacts-input {
+    width: 700px;
   }
 }

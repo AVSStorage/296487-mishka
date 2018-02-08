@@ -1,5 +1,9 @@
 .page-footer {
   background-color: #f0f0f0;
+  width: 100%;
+}
+
+.page-footer__wrapper {
   width: 320px;
 }
 
@@ -17,13 +21,12 @@
   display: none;
 }
 
-.page-footer__copyright {
-  display: flex;
-  align-items: center;
-}
-
 @media (min-width: @tablet-width) {
   .page-footer {
+    width: 100%;
+  }
+
+  .page-footer__wrapper {
     width: 768px;
     display: flex;
     justify-content: space-around;
@@ -32,19 +35,15 @@
   .page-footer__logo {
     display: block;
   }
-
-  .page-footer__img {
-    padding-top: 30px;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    width: 1150px;
-    min-height: 149px;
+    width: 100%;
   }
 
-  .page-footer__img {
-    padding-top: 60px;
+  .page-footer__wrapper {
+    width: 1150px;
+    min-height: 149px;
   }
 }
