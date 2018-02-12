@@ -1,16 +1,21 @@
 .products-info {
-  display: flex;
-  flex-direction: column;
-  color: @white;
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 24px;
+  width: 100%;
 }
 
 .products-info__item {
   width: 106px;
   display: block;
-  padding: 25px 30px;
+  padding: 27px 30px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.products-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  color: @white;
   font-size: 19px;
   font-weight: 700;
   line-height: 24px;
@@ -23,7 +28,7 @@
   font-weight: 700;
   line-height: 30px;
   text-align: center;
-  padding-top: 150px;
+  padding-top: 73px;
   color: @black;
 }
 
@@ -36,67 +41,88 @@
   background-position: -125px -15px;
 }
 
-.products-info__link {
-  min-height: 103px;
+.products-info__link--interior,
+.products-info__link--toys {
   width: 320px;
   display: block;
   position: relative;
 
-  &:first-of-type {
-    background-color: @blue;
-  }
-
-  &:last-of-type {
-    background-color: #56c3b2;
+  &:active .products-info__item {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
-.products-info__img {
+.products-info__link--interior {
+  background-color: @blue;
+
+  &:hover {
+    background-color: #59d5bc;
+  }
+
+  &:active {
+    background-color: #59d5bc;
+  }
+
+  &:active .products-info__img--interior {
+    opacity: 0.3;
+  }
+}
+
+.products-info__link--toys {
+  background-color: #56c3b2;
+
+  &:hover {
+    background-color: #46c1ae;
+  }
+
+  &:active {
+    background-color: #46c1ae;
+  }
+
+  &:active .products-info__img--toys {
+    opacity: 0.3;
+  }
+}
+
+.products-info__img--interior,
+.products-info__img--toys {
   position: absolute;
-  top: 23px;
-  left: 238px;
   opacity: 0.5;
+  top: 23px;
   fill: #149080;
+}
+
+.products-info__img--interior {
+  left: 243px;
+}
+
+.products-info__img--toys {
+  left: 230px;
 }
 
 @media (min-width: @tablet-width) {
   .products-info {
-    width: 768px;
-    min-height: 746px;
     margin-top: -90px;
     background-color: #f0f0f0;
+  }
 
-    &::after {
-      content: "";
-      width: 1250px;
-      height: 34px;
-      background-image: url("../img/zigzag-tablet.png");
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 820px;
-    }
+  .products-info__wrapper {
+    width: 768px;
   }
 
   .products-info__preview {
-    display: block;
     width: 768px;
-    min-height: 627px;
     background-image: none;
     position: relative;
-  }
-
-  .products-info__title br:first-of-type {
-    display: none;
+    height: 629px;
   }
 
   .products-info__block {
     display: flex;
+    padding-left: 49px;
   }
 
   .products-info__item {
-    padding: 0;
-    padding-top: 27px;
-    padding-left: 37px;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -107,57 +133,49 @@
     min-height: 119px;
   }
 
-  .products-info__link:first-of-type .products-info__img {
+  .products-info__img--interior {
     top: 30px;
     left: 255px;
   }
 
-  .products-info__link:last-of-type .products-info__img {
+  .products-info__img--toys {
     top: 30px;
   }
 
   .products-info__title {
     padding-top: 154px;
+    margin-left: 133px;
+    width: 500px;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .products-info {
-    width: 100%;
-    background-color: #f9f9f9;
-
-
-    &::after {
-      content: "";
-      width: 1250px;
-      height: 34px;
-      background-image: url("../img/zigzag.png");
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 820px;
-      left: 35px;
-    }
-  }
-
   .products-info__link {
     width: 524px;
-    min-height: 119px;
   }
 
   .products-info__block {
-    margin-left: 42px;
+    padding-left: 46px;
   }
 
-  .products-info__link:first-of-type .products-info__img {
+  .products-info__img--interior {
     left: 448px;
   }
 
-  .products-info__link:last-of-type .products-info__img {
+  .products-info__img--toys {
     left: 430px;
   }
 
   .products-info__title {
     padding-top: 155px;
+    margin-left: 265px;
+    width: 616px;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
   }
 
   .products-info__item {
@@ -170,6 +188,5 @@
 
   .products-info__wrapper {
     width: 1150px;
-    min-height: 650px;
   }
 }

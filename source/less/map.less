@@ -1,0 +1,30 @@
+.map__interactive {
+  display: none;
+}
+
+.map {
+  width: 100%;
+}
+
+.map__wrapper {
+  width: 320px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__wrapper {
+    width: 100%;
+  }
+
+  .map {
+    width: 525px;
+    order: 1;
+    align-self: flex-end;
+    margin-top: -512px;
+  }
+}

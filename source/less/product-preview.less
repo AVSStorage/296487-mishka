@@ -1,8 +1,15 @@
 .product-preview {
+  width: 100%;
+}
+
+.product-preview__wrapper {
   width: 320px;
+  padding-top: 29px;
+  padding-left: 29px;
 }
 
 .product-preview__title {
+  margin: 0;
   color: @black;
   font-size: 25px;
   font-weight: 700;
@@ -18,18 +25,18 @@
 }
 
 .product-preview__descr {
+  margin: 0;
+  width: 249px;
   color: @gray;
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  margin: 0;
-  padding: 22px 30px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
 .product-preview__table {
-  display: block;
   padding-top: 3px;
-  padding-left: 30px;
   color: @gray;
   font-size: 15px;
   font-weight: 400;
@@ -39,7 +46,7 @@
 .product-preview__price {
   display: block;
   padding-top: 25px;
-  padding-left: 98px;
+  padding-left: 68px;
   color: @gray;
   font-size: 17px;
   font-weight: 700;
@@ -48,73 +55,75 @@
 
 .product-preview__order {
   .button-properties();
-  margin-top: 30px;
-  margin-left: 45px;
+  width: 259px;
+  height: 52px;
+  border: 2px solid #444444;
+  margin-top: 26px;
+
+  &:hover {
+    color: @white;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #444444;
+  }
 }
 
 .product-preview__order-label {
   display: block;
-  padding-top: 18px;
+  padding-top: 17px;
   text-align: center;
-}
-
-.product-preview__wrapper {
-  padding-top: 29px;
-  padding-left: 29px;
 }
 
 .product-preview__img {
   display: block;
-  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
-  .product-preview {
-    display: flex;
-    flex-direction: column;
-    width: 768px;
-  }
-
   .product-preview__order {
     width: 292px;
+    margin-top: 30px;
+  }
+
+  .product-preview__table {
+    margin-bottom: 32px;
+  }
+
+  .product-preview__title-wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .product-preview__info {
-    display: inline-block;
+    margin-top: 8px;
+    margin-right: 30px;
+    width: 70px;
     text-align: center;
-    padding-top: 8px;
-    padding-left: 148px;
   }
 
   .product-preview__wrapper {
     display: flex;
-    padding-left: 0;
+    flex-direction: column;
+    width: 768px;
     padding-top: 47px;
-  }
-
-  .product-preview__title {
-    margin: 0;
     padding-left: 45px;
+    padding-right: 51px;
   }
 
   .product-preview__price {
     font-size: 20px;
-    font-weight: 700;
     line-height: 24px;
-    margin-top: -130px;
+    padding-left: 75px;
   }
 
   .product-preview__descr {
     width: 282px;
-    padding: 45px 47px;
+    padding: 50px 0 36px;
     font-size: 17px;
     font-weight: 400;
     line-height: 30px;
-  }
-
-  .product-preview__table {
-    padding-top: 0;
-    padding-left: 50px;
   }
 
   .product-preview__img {
@@ -122,31 +131,30 @@
     height: 404px;
     margin: 0;
     align-self: flex-end;
-    margin-top: -267px;
+    margin-top: -404px;
+    order: 1;
+  }
+
+  .product-preview__title {
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .product-preview {
-    width: 100%;
-  }
-
   .product-preview__price {
     padding-top: 0;
-    margin-top: 0;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
+    margin-top: 84px;
     padding-left: 76px;
   }
 
   .product-preview__wrapper {
     width: 1150px;
-    display: flex;
-    flex-direction: column;
     position: relative;
     padding-top: 124px;
     padding-left: 220px;
+    padding-right: 0;
   }
 
   .product-preview__img {
@@ -162,18 +170,18 @@
   .product-preview__title {
     z-index: 1;
     padding-left: 0;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
   }
 
   .product-preview__info {
-    display: block;
     position: absolute;
-    top: 130px;
-    left: -49px;
+    left: 96px;
   }
 
   .product-preview__table {
-    padding-left: 0;
-    padding-bottom: 83px;
+    margin-bottom: 25px;
   }
 
   .product-preview__order {
@@ -182,7 +190,6 @@
   }
 
   .product-preview__descr {
-    padding: 52px 0;
-    padding-left: 0;
+    padding: 49px 0;
   }
 }
