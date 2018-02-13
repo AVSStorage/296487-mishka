@@ -1,11 +1,12 @@
 .text-block__text {
   .text-in-form();
+  font-weight: 700;
 }
 
 .text-block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .text-block__input,
@@ -26,11 +27,29 @@
   }
 }
 
+.text-block__icon-number,
+.text-block__icon-mail {
+  position: absolute;
+  right: 3px;
+  top: 16px;
+  opacity: 0.2;
+}
+
+.text-block__icon-number {
+  right: 9px;
+}
+
 input::placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: @tablet-width) {
+  .text-block {
+    display: block;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
   .text-block__text {
     padding-right: 20px;
     font-size: 19px;
@@ -45,6 +64,19 @@ input::placeholder {
     font-size: 19px;
     font-weight: 400;
     line-height: 18px;
+  }
+
+  .text-block__icon-mail,
+  .text-block__icon-number {
+    top: 10px;
+  }
+
+  .text-block__icon-mail {
+    right: 20px;
+  }
+
+  .text-block__icon-number {
+    right: 24px;
   }
 
 
@@ -66,12 +98,10 @@ input::placeholder {
   }
 
   .text-block__input--mail {
-    margin-left: 109px;
     padding-left: 17px;
   }
 
   .text-block__input--number {
-    margin-left: 135px;
     padding-left: 15px;
     letter-spacing: -1px;
   }
@@ -88,18 +118,20 @@ input::placeholder {
   }
 
   .text-block__input--number {
-    margin-left: 0;
     width: 700px;
   }
 
   .text-block__input--mail {
     width: 700px;
-    margin-left: 0;
   }
 
   .text-block__icon-mail {
-    right: 5px;
-    top: 14px;
+    right: 0;
+    top: 10px;
+  }
+
+  .text-block__input--contacts {
+    width: 700px;
   }
 
   .text-block__icon-number {
