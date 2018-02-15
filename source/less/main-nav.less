@@ -54,11 +54,19 @@
   background-color: #ffffff;
 }
 
-.main-nav--opened .main-nav__toggle--active {
-  display: none;
+.main-nav__logo--active {
+  display: block;
+  padding: 20px 0;
 }
 
-.main-nav--opened .main-nav__logo--active {
+.main-nav__active-item {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 120px;
+  padding-right: 27px;
+}
+
+.main-nav--opened .main-nav__active-item {
   display: none;
 }
 
@@ -75,29 +83,27 @@
   z-index: 1;
 }
 
-.main-nav--closed .main-nav__toggle {
-  display: block;
+.main-nav--closed .main-nav__toggle--active {
   width: 20px;
   height: 14px;
-  position: absolute;
-  top: 30px;
-  left: 396px;
+  margin-left: auto;
+  margin-top: 31px;
   font-size: 0;
   border: none;
   background-color: @white;
   background-image: url("../img/icon-menu-open.svg");
 }
 
-.main-nav__logo--active {
-  visibility: hidden;
-}
-
 .main-nav--closed .main-nav__wrapper {
   display: none;
 }
 
-.main-nav--closed .main-nav__logo--active {
-  visibility: visible;
+.main-nav--opened .main-nav__toggle--active {
+  display: none;
+}
+
+.main-nav--closed .main-nav__active-item {
+  display: flex;
 }
 
 @media (min-width: @tablet-width) {
@@ -105,7 +111,7 @@
     display: flex;
   }
 
-  .main-nav--closed .main-nav__logo--active {
+  .main-nav--closed .main-nav__active-item {
     display: none;
   }
 
@@ -163,15 +169,17 @@
     width: 1150px;
     height: 89px;
     flex-wrap: nowrap;
+    border-bottom: 1px solid #ececec;
   }
 
   .main-nav__logo {
-    width: 288px;
+    width: 297px;
     order: 2;
+    border: none;
   }
 
   .main-nav__list {
-    width: 445px;
+    width: 437px;
     display: flex;
     flex-wrap: wrap;
     background-color: #ffffff;
@@ -189,8 +197,7 @@
     line-height: 24px;
 
     &:nth-child(2) {
-      padding: 32px 35px;
-      border-bottom: 1px solid #ececec;
+      padding: 32px 31px;
       border-left: 1px solid #ececec;
     }
 
@@ -204,10 +211,6 @@
 
     &:nth-child(4) {
       padding-left: 30px;
-    }
-
-    &:first-child {
-      border-bottom: 1px solid #ececec;
     }
   }
 }

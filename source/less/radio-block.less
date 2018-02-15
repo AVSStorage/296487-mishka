@@ -1,7 +1,7 @@
 .radio-block__text {
   display: inline-block;
   width: 161px;
-  margin-left: 63px;
+  margin-left: 49px;
   margin-top: 7px;
   font-size: 17px;
   font-weight: 700;
@@ -32,11 +32,15 @@
 }
 
 .radio-block__input {
-  display: none;
+  opacity: 0;
+}
+
+.radio-block__input:focus + .radio-block__text::before {
+  box-shadow: 0 0 2px 3px rgba(81, 203, 238, 1);
 }
 
 .radio-block {
-  display: block;
+  display: flex;
   margin-bottom: 17px;
   position: relative;
 }
@@ -47,12 +51,12 @@
 
 @media (min-width: @tablet-width) {
   .radio-block {
-    margin-bottom: 39px;
+    margin-bottom: 43px;
   }
 
   .radio-block__text {
     width: 100%;
-    margin-left: 81px;
+    margin-left: 68px;
     margin-top: 15px;
     font-size: 19px;
     font-weight: 700;
