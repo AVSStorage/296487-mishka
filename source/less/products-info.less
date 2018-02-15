@@ -24,7 +24,6 @@
   font-weight: 700;
   line-height: 30px;
   text-align: center;
-  padding-top: 73px;
   color: @black;
 }
 
@@ -35,10 +34,13 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: -125px -15px;
+  padding-top: 69px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 123px;
 }
 
-.products-info__link--interior,
-.products-info__link--toys {
+.products-info__link {
   width: 320px;
   color: @white;
   font-size: 19px;
@@ -86,10 +88,13 @@
   }
 }
 
-.products-info__img--interior,
-.products-info__img--toys {
+.products-info__img {
   opacity: 0.5;
   fill: #149080;
+}
+
+.products-info__shipping {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -109,6 +114,10 @@
     background-image: none;
     position: relative;
     height: 629px;
+    padding-left: 135px;
+    padding-bottom: 100px;
+    padding-right: 49px;
+    padding-top: 18px;
   }
 
   .products-info__block {
@@ -122,31 +131,36 @@
     line-height: 30px;
   }
 
-  .products-info__link--toys,
-  .products-info__link--interior {
+  .products-info__link {
     width: 333px;
     padding: 26px 35px;
   }
 
   .products-info__title {
-    padding-top: 154px;
-    margin-left: 133px;
     width: 500px;
     font-size: 43px;
     font-weight: 700;
     line-height: 50px;
   }
+
+  .products-info__shipping {
+    width: 100%;
+    margin-bottom: 111px;
+    display: block;
+    text-align: right;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .products-info__link--interior,
-  .products-info__link--toys {
+  .products-info {
+    margin-top: 0;
+  }
+
+  .products-info__link {
     width: 524px;
   }
 
   .products-info__title {
-    padding-top: 155px;
-    margin-left: 265px;
     width: 616px;
     font-size: 53px;
     font-weight: 700;
@@ -155,6 +169,14 @@
 
   .products-info__preview {
     width: 1150px;
+    padding-left: 251px;
+    padding-bottom: 100px;
+    padding-right: 53px;
+    padding-top: 18px;
+  }
+
+  .products-info__shipping {
+    margin-bottom: 112px;
   }
 
   .products-info__wrapper {

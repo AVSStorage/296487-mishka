@@ -61,6 +61,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     margin-bottom: 52px;
+    position: relative;
   }
 
   .textarea__input-wrapper {
@@ -73,6 +74,11 @@ textarea::placeholder {
     align-items: center;
     padding-top: 43px;
     justify-content: space-between;
+  }
+
+  .textarea__title {
+    position: absolute;
+    top: 17px;
   }
 
   .textarea__post {
@@ -90,7 +96,7 @@ textarea::placeholder {
 
 @media (min-width: @desktop-width) {
   .textarea__wrapper {
-    width: 931px;
+    width: 956px;
     margin-bottom: 50px;
   }
 
