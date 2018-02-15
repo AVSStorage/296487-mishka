@@ -1,0 +1,51 @@
+.radio {
+  width: 100%;
+}
+
+.radio__title {
+  margin: 0;
+  color: @blue;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.radio__wrapper {
+  width: 248px;
+  margin-bottom: 27px;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio__inputs-wrapper {
+  padding-top: 25px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .radio__wrapper {
+    width: 667px;
+    flex-direction: row;
+    margin-bottom: 27px;
+  }
+
+  .radio__title {
+    padding-top: 17px;
+  }
+
+  .radio__inputs-wrapper {
+    padding-left: 130px;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .radio__wrapper {
+    width: 953px;
+  }
+
+  .radio__inputs-wrapper {
+    padding-left: 76px;
+  }
+}

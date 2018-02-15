@@ -1,17 +1,21 @@
 .modal {
   width: 320px;
-  height: 336px;
+  min-height: 336px;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
   border: 1px solid #c6c6c6;
 }
 
-.modal__wrapper {
+.modal__buttons {
+  margin-left: 33px;
+  margin-top: 23px;
   display: block;
 }
 
 .modal__label {
   display: block;
-  width: 146px;
+  margin-top: 30px;
+  margin-left: 90px;
+  width: 150px;
   color: @black;
   font-size: 25px;
   font-weight: 700;
@@ -21,6 +25,8 @@
 
 .modal__check-size {
   display: block;
+  margin-top: 10px;
+  margin-left: 92px;
   color: @gray;
   font-size: 15px;
   font-weight: 400;
@@ -44,6 +50,53 @@
 }
 
 .modal__buy {
+  margin-top: 34px;
+  margin-left: 32px;
   background-color: @blue;
   color: @white;
+}
+
+.modal__buy-label {
+  padding-top: 15px;
+  display: block;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 566px;
+    min-height: 336px;
+  }
+
+  .modal__label {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 57px;
+    width: 100%;
+    margin-left: 110px;
+    margin-top: 30px;
+  }
+
+  .modal__check-size {
+    margin-left: 206px;
+    margin-top: 18px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .modal__size {
+    width: 112px;
+    height: 52px;
+  }
+
+  .modal__wrapper {
+    margin-top: 3px;
+    margin-left: 110px;
+  }
+
+  .modal__buy {
+    margin-top: 35px;
+    margin-left: 108px;
+  }
 }

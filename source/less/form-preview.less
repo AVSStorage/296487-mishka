@@ -1,8 +1,44 @@
 .form-preview__descr {
   display: block;
-  width: 232px;
+  margin: 0;
   color: @gray;
   font-size: 13px;
   font-weight: 400;
   line-height: 24px;
+}
+
+.form-preview__descr-wrapper {
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.form-preview {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .form-preview__descr {
+    width: 670px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form-preview__descr-wrapper {
+    width: 664px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-preview__descr {
+    width: 702px;
+  }
+
+  .form-preview__descr-wrapper {
+    width: 732px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
 }
