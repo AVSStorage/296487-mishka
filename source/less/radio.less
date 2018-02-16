@@ -16,6 +16,17 @@
   margin-bottom: 27px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 7px;
+    width: 198px;
+    height: 1px;
+    background-image: url("../img/form-line.png");
+  }
 }
 
 .radio__inputs-wrapper {
@@ -28,6 +39,11 @@
     width: 667px;
     flex-direction: row;
     margin-bottom: 27px;
+
+    &::before {
+      content: "";
+      display: none;
+    }
   }
 
   .radio__title {

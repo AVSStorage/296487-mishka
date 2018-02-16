@@ -16,6 +16,17 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 7px;
+    width: 198px;
+    height: 1px;
+    background-image: url("../img/form-line.png");
+  }
 }
 
 .checkbox__inputs-wrapper {
@@ -33,6 +44,10 @@
     padding-top: 50px;
     padding-bottom: 25px;
     margin-bottom: 57px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .checkbox__inputs-wrapper {

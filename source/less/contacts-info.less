@@ -16,8 +16,31 @@
   padding-left: 10px;
 }
 
+.contacts-info__text-wrapper:last-of-type {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 78px;
+    top: 7px;
+    width: 179px;
+    height: 1px;
+    background-image: url("../img/form-line.png");
+  }
+}
+
 .contacts-info__text-wrapper {
   margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 7px;
+    width: 198px;
+    height: 1px;
+    background-image: url("../img/form-line.png");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -40,6 +63,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 26px;
+
+    &::before {
+      display: none;
+    }
   }
 }
 

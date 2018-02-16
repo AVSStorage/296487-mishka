@@ -34,6 +34,7 @@
 }
 
 .product-preview__table {
+  width: 260px;
   padding-top: 3px;
   margin-bottom: 30px;
   color: @gray;
@@ -46,7 +47,7 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  padding: 24px 0;
+  padding: 16px 0 23px 0;
   color: @gray;
   font-size: 17px;
   font-weight: 700;
@@ -80,6 +81,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .product-preview {
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      background-image: url("../img/bg-zigzag-line.svg");
+      height: 25px;
+      background-size: 1200px 24px;
+      bottom: 0;
+      background-repeat: no-repeat;
+    }
+  }
+
   .product-preview__order {
     width: 292px;
   }
@@ -102,12 +118,13 @@
     width: 768px;
     padding-left: 45px;
     padding-right: 51px;
-    margin-bottom: 119px;
+    padding-bottom: 65px;
+    margin-bottom: 46px;
   }
 
   .product-preview__price {
     width: 295px;
-    padding: 29px 0;
+    padding: 27px 0 30px 0;
     font-size: 20px;
     line-height: 24px;
   }
@@ -121,12 +138,14 @@
   }
 
   .product-preview__img {
-    width: 333px;
-    height: 404px;
     margin: 0;
     align-self: flex-end;
     margin-top: -404px;
     order: 1;
+  }
+
+  .product-preview__table {
+    width: 290px;
   }
 
   .product-preview__title {
@@ -138,21 +157,23 @@
 
 @media (min-width: @desktop-width) {
   .product-preview__price {
-    padding: 77px 0 35px;
+    padding: 77px 0 32px;
   }
 
   .product-preview__wrapper {
     width: 1150px;
     position: relative;
-    padding-left: 220px;
     padding-right: 0;
-    margin-bottom: 156px;
+    padding-left: 207px;
+    margin-bottom: 150px;
+
+    &::after {
+      width: 1050px;
+    }
   }
 
   .product-preview__img {
     margin: 0;
-    width: 525px;
-    height: 636px;
     margin-top: -636px;
     margin-right: 55px;
     order: 1;
@@ -168,9 +189,9 @@
   }
 
   .product-preview__info {
-    margin-top: 17px;
+    margin-top: 14px;
     position: absolute;
-    left: 96px;
+    left: 85px;
   }
 
 

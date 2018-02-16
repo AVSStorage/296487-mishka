@@ -39,6 +39,17 @@
 .textarea__wrapper {
   width: 253px;
   margin-bottom: 57px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 7px;
+    width: 198px;
+    height: 1px;
+    background-image: url("../img/form-line.png");
+  }
 }
 
 .textarea__input-wrapper {
@@ -61,7 +72,10 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-    position: relative;
+
+    &::before {
+      display: none;
+    }
   }
 
   .textarea__input-wrapper {
