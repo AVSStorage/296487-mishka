@@ -5,6 +5,17 @@
 .text__wrapper {
   width: 254px;
   margin-bottom: 35px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 62px;
+    top: 7px;
+    width: 198px;
+    height: 1px;
+    background-image: url("../img/form-line.png");
+  }
 }
 
 .text__inputs-wrapper {
@@ -34,6 +45,10 @@
     width: 669px;
     display: flex;
     margin-bottom: 25px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .text__title {

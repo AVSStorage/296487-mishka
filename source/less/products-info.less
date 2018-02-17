@@ -38,6 +38,11 @@
   padding-left: 7px;
   padding-right: 7px;
   padding-bottom: 123px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 573px auto;
+  }
 }
 
 .products-info__link {
@@ -48,7 +53,8 @@
   line-height: 24px;
   display: flex;
   justify-content: space-between;
-  padding: 21px 27px;
+  text-decoration: none;
+  padding: 21px 31px;
   position: relative;
 
   &:active .products-info__item {
@@ -100,7 +106,20 @@
 @media (min-width: @tablet-width) {
   .products-info {
     margin-top: -60px;
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      width: 100%;
+      height: 23px;
+      background-size: auto 23px;
+      bottom: -13px;
+      background-position: center center;
+      background-repeat: repeat-x;
+    }
   }
 
   .products-info__wrapper {
@@ -111,13 +130,19 @@
 
   .products-info__preview {
     width: 768px;
-    background-image: none;
     position: relative;
-    height: 629px;
+    height: 627px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: -184px 0;
+    background-size: 1139px auto;
     padding-left: 135px;
     padding-bottom: 100px;
-    padding-right: 49px;
+    padding-right: 52px;
     padding-top: 18px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
   }
 
   .products-info__block {
@@ -145,6 +170,8 @@
 
   .products-info__shipping {
     width: 100%;
+    font-size: 15px;
+    font-weight: 400;
     margin-bottom: 111px;
     display: block;
     text-align: right;
@@ -154,6 +181,13 @@
 @media (min-width: @desktop-width) {
   .products-info {
     margin-top: 0;
+
+    &::after {
+      background-position: 0 0;
+      height: 36px;
+      background-size: auto 38px;
+      bottom: -19px;
+    }
   }
 
   .products-info__link {
@@ -171,8 +205,15 @@
     width: 1150px;
     padding-left: 251px;
     padding-bottom: 100px;
-    padding-right: 53px;
+    padding-right: 68px;
     padding-top: 18px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-size: 1200px auto;
+    background-position: -43px -16px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 
   .products-info__shipping {
@@ -182,5 +223,9 @@
   .products-info__wrapper {
     width: 1150px;
     margin-bottom: 124px;
+  }
+
+  .products-info__block {
+    padding-right: 30px;
   }
 }

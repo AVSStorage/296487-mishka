@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .production__preview {
@@ -21,8 +21,16 @@
   border-right: 1px solid #ededed;
 }
 
-.production__process-info {
+.production__video {
   order: 2;
+  width: 260px;
+  height: 150px;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-size: 260px auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 }
 
 .production__main {
@@ -83,7 +91,7 @@
     display: flex;
     flex-direction: column;
     width: 668px;
-    margin-bottom: 64px;
+    margin-bottom: 65px;
   }
 
   .production__title {
@@ -104,10 +112,16 @@
     padding-bottom: 35px;
   }
 
-  .production__process-info {
+  .production__video {
     order: 1;
     width: 668px;
     height: 455px;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: 669px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
 
   .production__order {
@@ -117,7 +131,7 @@
   .production__main {
     padding-top: 17px;
     padding-left: 38px;
-    padding-bottom: 45px;
+    padding-bottom: 47px;
   }
 
   .production__process-play {
@@ -133,7 +147,7 @@
 
 @media (min-width: @desktop-width) {
   .production__wrapper {
-    width: 1059px;
+    width: 1076px;
     align-items: flex-end;
     margin-bottom: 105px;
   }
@@ -143,9 +157,9 @@
   }
 
   .production__preview {
-    padding-right: 150px;
+    padding-right: 170px;
     padding-left: 0;
-    padding-top: 50px;
+    padding-top: 53px;
     border: none;
   }
 
@@ -160,7 +174,7 @@
   .production__main {
     order: 2;
     border: none;
-    padding-right: 4px;
+    padding-right: 24px;
   }
 
   .production__order {
@@ -173,12 +187,18 @@
     top: 0;
   }
 
-  .production__process-info {
+  .production__video {
     width: 682px;
     height: 455px;
     order: 3;
     align-self: flex-start;
     margin-top: -434px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: 686px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 
   .production__process-play {

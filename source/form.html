@@ -9,17 +9,21 @@
 </head>
 <body>
 <header class="page-header">
-  <nav class="main-nav main-nav--closed">
+  <nav class="main-nav main-nav--opened">
     <div class="main-nav__active-item">
       <a class="main-nav__logo main-nav__logo--active" href="index.html">
-        <img class="main-nav__logo-img" src="./img/logo-mobile.svg" alt="Mishka">
+        <img class="main-nav__logo-img" src="img/logo-mobile.svg" alt="Mishka">
       </a>
       <button class="main-nav__toggle main-nav__toggle--active" type="button">Открыть меню</button>
     </div>
     <div class="main-nav__wrapper container">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <a class="main-nav__logo" href="index.html">
-        <img class="main-nav__logo-img" src="./img/logo-mobile.svg" alt="Mishka">
+        <picture class="main-nav__logo-img">
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" alt="Mishka">
+        </picture>
       </a>
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -37,7 +41,7 @@
       </ul>
       <ul class="main-nav__user-list user-list">
         <li class="user-list__item user-list__item--search">
-          <a class="user-list__link ">Поиск по сайту</a>
+          <a class="user-list__link">Поиск по сайту</a>
           <svg class="user-list__icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
             <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
           </svg>
@@ -137,8 +141,7 @@
         <div class="contacts-info__text-wrapper">
           <h3 class="contacts-info__title">Тел</h3>
           <label class="text-block">
-            <input class="text-block__input text-block__input--contacts" aria-label="Телефон" type="number"
-                   placeholder="+7 ХХХ ХХ ХХ*">
+            <input class="text-block__input text-block__input--contacts" aria-label="Телефон" type="number" placeholder="+7 ХХХ ХХ ХХ*">
             <svg class="text-block__icon-number" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333" enable-background="new 0 0 24.829 24.333" xml:space="preserve">
               <g>
                 <g id="UrwUhy_2_">
@@ -156,8 +159,7 @@
         <div class="contacts-info__text-wrapper">
           <h3 class="contacts-info__title">E-mail</h3>
           <label class="text-block">
-            <input class="text-block__input text-block__input--contacts" aria-label="E-mail" type="email"
-                   placeholder="Ваш Email*">
+            <input class="text-block__input text-block__input--contacts" aria-label="E-mail" type="email" placeholder="Ваш Email*">
             <svg class="text-block__icon-mail" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <path id="mail" fill="#333333" d="M28,5H4C1.791,5,0,6.792,0,9v13c0,2.209,1.791,4,4,4h24c2.209,0,4-1.791,4-4V9 C32,6.792,30.209,5,28,5z M2,10.25l6.999,5.25L2,20.75V10.25z M30,22c0,1.104-0.898,2-2,2H4c-1.103,0-2-0.896-2-2l7.832-5.875 l4.368,3.277c0.533,0.397,1.166,0.6,1.8,0.6c0.633,0,1.266-0.201,1.799-0.6l4.369-3.277L30,22L30,22z M30,20.75l-7-5.25l7-5.25 V20.75z M17.199,18.602c-0.35,0.263-0.763,0.4-1.199,0.4s-0.851-0.139-1.2-0.4L10.665,15.5l-0.833-0.625L2,9.001V9 c0-1.103,0.897-2,2-2h24c1.102,0,2,0.897,2,2L17.199,18.602z"/>
             </svg>
@@ -201,7 +203,7 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper container">
     <div class="page-footer__logo">
-      <img class="page-footer__img" src="img/logo-mobile.svg">
+      <img class="page-footer__img" src="img/logo-footer.svg">
     </div>
     <div class="page-footer__social social">
       <ul class="social-list">

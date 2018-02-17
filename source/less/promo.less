@@ -13,8 +13,8 @@
 .promo__wrapper {
   width: 320px;
   min-height: 175px;
-  margin-bottom: 23px;
-  padding: 69px 26px 60px 43px;
+  margin-bottom: 21px;
+  padding: 69px 26px 79px 43px;
 }
 
 .promo__shipping {
@@ -26,12 +26,26 @@
     margin-top: -60px;
     width: 100%;
     background-color: #f1f1f1;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: center center;
+      height: 23px;
+      background-size: auto 23px;
+      bottom: -8px;
+      background-repeat: repeat-x;
+    }
   }
 
   .promo__wrapper {
     width: 768px;
     height: 226px;
-    margin-bottom: 71px;
+    margin-bottom: 73px;
     padding-top: 18px;
     padding-left: 186px;
     padding-bottom: 83px;
@@ -59,12 +73,19 @@
   .promo {
     width: 100%;
     margin-top: 0;
+
+    &::after {
+      background-position: 0 0;
+      height: 34px;
+      background-size: auto 34px;
+      bottom: -19px;
+    }
   }
 
   .promo__wrapper {
     width: 1150px;
     height: 255px;
-    margin-bottom: 125px;
+    margin-bottom: 120px;
     padding-left: 319px;
     padding-right: 66px;
   }
