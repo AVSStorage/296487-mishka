@@ -26,6 +26,20 @@
     margin-top: -60px;
     width: 100%;
     background-color: #f1f1f1;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: center center;
+      height: 23px;
+      background-size: auto 23px;
+      bottom: -8px;
+      background-repeat: repeat-x;
+    }
   }
 
   .promo__wrapper {
@@ -59,6 +73,13 @@
   .promo {
     width: 100%;
     margin-top: 0;
+
+    &::after {
+      background-position: 0 0;
+      height: 34px;
+      background-size: auto 34px;
+      bottom: -19px;
+    }
   }
 
   .promo__wrapper {

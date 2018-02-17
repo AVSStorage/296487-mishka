@@ -89,10 +89,11 @@
       width: 100%;
       position: absolute;
       background-image: url("../img/bg-zigzag-line.svg");
-      height: 25px;
-      background-size: 1200px 24px;
+      background-position: center center;
+      height: 16px;
+      background-size: auto 15px;
       bottom: 0;
-      background-repeat: no-repeat;
+      background-repeat: repeat-x;
     }
   }
 
@@ -124,7 +125,7 @@
 
   .product-preview__price {
     width: 295px;
-    padding: 27px 0 30px 0;
+    padding: 27px 0 33px 0;
     font-size: 20px;
     line-height: 24px;
   }
@@ -156,6 +157,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .product-preview {
+    &::after {
+      height: 20px;
+      background-size: auto 18px;
+    }
+  }
+
   .product-preview__price {
     padding: 77px 0 32px;
   }
@@ -165,11 +173,8 @@
     position: relative;
     padding-right: 0;
     padding-left: 207px;
-    margin-bottom: 150px;
-
-    &::after {
-      width: 1050px;
-    }
+    padding-bottom: 88px;
+    margin-bottom: 62px;
   }
 
   .product-preview__img {

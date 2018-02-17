@@ -96,10 +96,11 @@
       width: 100%;
       position: absolute;
       background-image: url("../img/bg-zigzag-line.svg");
-      height: 25px;
-      background-size: 1200px 24px;
+      height: 23px;
+      background-size: auto 15px;
       bottom: 0;
-      background-repeat: no-repeat;
+      background-position: center center;
+      background-repeat: repeat-x;
     }
   }
 
@@ -173,6 +174,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .reviews {
+    &::after {
+      height: 25px;
+      background-size: auto 19px;
+    }
+  }
+
   .reviews__title {
     font-size: 53px;
     font-weight: 700;
@@ -194,7 +202,8 @@
     width: 1150px;
     padding-left: 208px;
     padding-right: 66px;
-    margin-bottom: 192px;
+    padding-bottom: 187px;
+    margin-bottom: 130px;
     background-position: 37px 0;
   }
 
