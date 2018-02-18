@@ -31,6 +31,15 @@
   }
 }
 
+
+.radio-block:hover + .radio-block__text::before {
+  border: 1px solid @blue;
+}
+
+.radio-block:active + .radio-block__text::before {
+  opacity: 0.3;
+}
+
 .radio-block__input {
   opacity: 0;
 }

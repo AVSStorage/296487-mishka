@@ -54,6 +54,13 @@
   background-color: #ffffff;
 }
 
+.logo-img--tablet {
+  display: none;
+}
+
+.logo-img--desktop {
+  display: none;
+}
 
 .main-nav__active-item {
   width: 320px;
@@ -66,7 +73,7 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-  background-image: url("../img/icon-menu-close.svg");
+  background-image: url("../img/menu-close.svg");
   position: absolute;
   width: 21px;
   height: 21px;
@@ -85,7 +92,7 @@
   font-size: 0;
   border: none;
   background-color: @white;
-  background-image: url("../img/icon-menu-open.svg");
+  background-image: url("../img/menu-open.svg");
 }
 
 .main-nav--closed .main-nav__wrapper {
@@ -164,6 +171,18 @@
     padding: 23px 0 0 46px;
     border-bottom: 1px solid #ececec;
   }
+
+  .logo-img--tablet {
+    display: block;
+
+    path {
+      fill: @white;
+    }
+  }
+
+  .logo-img--mobile {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -174,12 +193,29 @@
     border-bottom: 1px solid #ececec;
   }
 
+
   .main-nav__logo {
     width: 297px;
-    padding: 9px 43px 0 0;
+    padding: 9px 43px 11px 0;
     order: 2;
     border: none;
     justify-content: center;
+  }
+
+  .logo-img--tablet {
+    display: none;
+  }
+
+  .logo-img--desktop {
+    display: block;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .main-nav__list {

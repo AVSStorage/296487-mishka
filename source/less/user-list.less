@@ -37,6 +37,16 @@
   top: 32px;
   left: 32px;
   opacity: 0.2;
+
+  &:hover {
+    fill: @hover-blue;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @hover-blue;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -74,10 +84,10 @@
 
   .user-list__item--basket {
     width: 319px;
-    border: none;
+    border-bottom: none;
   }
 
   .user-list__item--search {
-    border: none;
+    border-bottom: none;
   }
 }
