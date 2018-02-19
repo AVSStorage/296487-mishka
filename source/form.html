@@ -5,38 +5,37 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link type="text/css" rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.js"></script>
-  <script src="js/svgxuse.js"></script>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link type="text/css" rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <header class="page-header">
   <nav class="main-nav main-nav--opened">
     <div class="main-nav__active-item">
-      <a class="main-nav__logo main-nav__logo--active" href="index.html">
+      <a class="main-nav__logo main-nav__logo--active" href="index.html" tabindex="1">
         <img class="main-nav__logo-img" src="img/icon-logo-mobile.svg" alt="Mishka">
       </a>
       <button class="main-nav__toggle main-nav__toggle--active" type="button">Открыть меню</button>
     </div>
     <div class="main-nav__wrapper container">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <a class="main-nav__logo" href="index.html">
-        <svg class="main-nav__logo-img logo-img--mobile" width="86px" height="35px">
+      <a class="main-nav__logo" href="index.html" tabindex="1">
+        <svg class="main-nav__logo-img main-nav__logo-img--mobile" width="86px" height="35px">
           <use xlink:href="img/sprite.svg#icon-logo-mobile"></use>
         </svg>
-        <svg class="main-nav__logo-img logo-img--tablet" width="113px" height="46px">
+        <svg class="main-nav__logo-img main-nav__logo-img--tablet" width="113px" height="46px">
           <use xlink:href="img/sprite.svg#icon-logo-tablet"></use>
         </svg>
-        <svg class="main-nav__logo-img logo-img--desktop" width="149px" height="72px">
+        <svg class="main-nav__logo-img main-nav__logo-img--desktop" width="149px" height="72px">
           <use xlink:href="img/sprite.svg#icon-logo-desktop"></use>
         </svg>
       </a>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+          <a class="main-nav__link" href="catalog.html" tabindex="2">Каталог товаров</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+          <a class="main-nav__link">Вязание на заказ</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link">Новые поступления</a>
@@ -46,14 +45,16 @@
         </li>
       </ul>
       <ul class="main-nav__user-list user-list">
-        <li class="user-list__item user-list__item--search">
-          <a class="user-list__link">Поиск по сайту</a>
-          <svg class="user-list__icon"  width="20px" height="19px">
-            <use xlink:href="img/sprite.svg#icon-search"></use>
-          </svg>
+        <li class="user-list__item user-list__item--search" tabindex="3">
+          <a class="user-list__link" href="#" tabindex="1">
+            <span class="user-list__link-text">Поиск по сайту</span>
+            <svg class="user-list__icon"  width="20px" height="19px">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
         </li>
         <li class="user-list__item user-list__item--basket">
-          <a class="user-list__link">Корзина:пока пуста</a>
+          <a class="user-list__link">Корзина: пока пуста</a>
           <svg class="user-list__icon" width="20px" height="18px" >
             <use xlink:href="img/sprite.svg#icon-cart"></use>
           </svg>
@@ -145,57 +146,43 @@
     <section class="contacts-info">
       <div class="contacts-info__wrapper container">
         <div class="contacts-info__text-wrapper">
-          <h3 class="contacts-info__title">Тел</h3>
-          <label class="text-block">
-            <input class="text-block__input text-block__input--contacts" aria-label="Телефон" type="number" placeholder="+7 ХХХ ХХ ХХ*">
+          <label class="contacts-info__title" for="number-input">Тел</label>
+          <div class="text-block">
+            <input class="text-block__input text-block__input--contacts" aria-label="Телефон" type="tel" id="number-input" placeholder="+7 ХХХ ХХ ХХ*">
             <svg class="text-block__icon-number"  width="24.829px" height="24.333px">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>
-          </label>
+          </div>
         </div>
         <div class="contacts-info__text-wrapper">
-          <h3 class="contacts-info__title">E-mail</h3>
-          <label class="text-block">
-            <input class="text-block__input text-block__input--contacts" aria-label="E-mail" type="email" placeholder="Ваш Email*">
+          <label class="contacts-info__title" for="mail-input">E-mail</label>
+          <div class="text-block">
+            <input class="text-block__input text-block__input--contacts" aria-label="E-mail" type="email" id="mail-input" placeholder="Ваш Email*">
             <svg class="text-block__icon-mail"  width="32px" height="32px">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
-          </label>
+          </div>
         </div>
       </div>
     </section>
     <section class="textarea">
       <div class="textarea__wrapper container">
-        <h3 class="textarea__title">Доп</h3>
+        <label class="textarea__title" for="textarea-input">Доп</label>
         <div class="textarea__input-wrapper">
-          <label class="textarea-block">
+          <div class="textarea-block">
             <textarea aria-label="Текстовое поле" class="textarea-block__textarea"
-                      placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </label>
+                      placeholder="Опишите все ваши пожелания к заказу" id="textarea-input"></textarea>
+          </div>
         </div>
         <div class="textarea__action-block">
-          <a class="textarea__post button" href="#">
+          <button class="textarea__post button" type="submit">
             <span class="textarea__post-text">Отправить заказ</span>
-          </a>
+          </button>
           <span class="textarea__notation">*Поля обязательны для заполнения</span>
         </div>
       </div>
     </section>
   </form>
-  <section class="modal visually-hidden">
-    <p class="modal__info">
-      <span class="modal__label">Добавить в корзину</span>
-      <span class="modal__check-size">Выберите размер:</span>
-    </p>
-    <div class="modal__buttons">
-      <button class="modal__size" autofocus>S</button>
-      <button class="modal__size">M</button>
-      <button class="modal__size">L</button>
-    </div>
-    <a class="modal__buy button" href="#">
-      <span class="modal__buy-label">Добавить</span>
-    </a>
-  </section>
 </main>
 <footer class="page-footer">
   <div class="page-footer__wrapper container">
@@ -231,7 +218,7 @@
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML-academy">
         <svg class="copyright__img" width="26.943px" height="34.09px">
           <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
         </svg>
@@ -239,5 +226,7 @@
     </div>
   </div>
 </footer>
+<script src="js/picturefill.js"></script>
+<script src="js/svgxuse.js"></script>
 </body>
 </html>

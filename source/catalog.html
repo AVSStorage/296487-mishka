@@ -5,28 +5,28 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link type="text/css" rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.js"></script>
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link type="text/css" rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <header class="page-header">
   <nav class="main-nav main-nav--opened">
     <div class="main-nav__active-item">
-      <a class="main-nav__logo main-nav__logo--active" href="index.html">
+      <a class="main-nav__logo main-nav__logo--active" href="index.html" tabindex="1">
         <img class="main-nav__logo-img" src="img/icon-logo-mobile.svg" alt="Mishka">
       </a>
       <button class="main-nav__toggle main-nav__toggle--active" type="button">Открыть меню</button>
     </div>
     <div class="main-nav__wrapper container">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <a class="main-nav__logo" href="index.html">
-        <svg class="main-nav__logo-img logo-img--mobile" width="86px" height="35px">
+      <a class="main-nav__logo" href="index.html" aria-label="Логотип Mishka" tabindex="1">
+        <svg class="main-nav__logo-img main-nav__logo-img--mobile"  width="86px" height="35px">
           <use xlink:href="img/sprite.svg#icon-logo-mobile"></use>
         </svg>
-        <svg class="main-nav__logo-img logo-img--tablet" width="113px" height="46px">
+        <svg class="main-nav__logo-img main-nav__logo-img--tablet" width="113px" height="46px">
           <use xlink:href="img/sprite.svg#icon-logo-tablet"></use>
         </svg>
-        <svg class="main-nav__logo-img logo-img--desktop" width="149px" height="72px">
+        <svg class="main-nav__logo-img main-nav__logo-img--desktop" width="149px" height="72px">
           <use xlink:href="img/sprite.svg#icon-logo-desktop"></use>
         </svg>
       </a>
@@ -35,7 +35,7 @@
           <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+          <a class="main-nav__link" href="form.html" tabindex="2">Вязание на заказ</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link">Новые поступления</a>
@@ -45,11 +45,13 @@
         </li>
       </ul>
       <ul class="main-nav__user-list user-list">
-        <li class="user-list__item user-list__item--search">
-          <a class="user-list__link">Поиск по сайту</a>
-          <svg class="user-list__icon"  width="20px" height="19px"  >
-            <use xlink:href="img/sprite.svg#icon-search"></use>
-          </svg>
+        <li class="user-list__item user-list__item--search" tabindex="3">
+          <a class="user-list__link" href="#" >
+            <span class="user-list__link-text">Поиск по сайту</span>
+            <svg class="user-list__icon"  width="20px" height="19px">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
         </li>
         <li class="user-list__item user-list__item--basket">
           <a class="user-list__link">Корзина:пока пуста</a>
@@ -221,7 +223,7 @@
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML-academy">
         <svg class="copyright__img"  width="26.943px" height="34.09px">
           <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
         </svg>
@@ -229,5 +231,6 @@
     </div>
   </div>
 </footer>
+<script src="js/picturefill.js"></script>
 </body>
 </html>
