@@ -40,7 +40,7 @@
 .modal__size {
   width: 82px;
   height: 52px;
-  border: 2px solid #ececec;
+  border: 2px solid @border-gray;
   background-color: @white;
   font-size: 17px;
   font-weight: 700;
@@ -48,7 +48,12 @@
   text-transform: uppercase;
   color: @gray;
 
-  &:focus {
+  &:hover {
+    border: 2px solid @gray;
+  }
+
+  &:focus,
+  &:active {
     border: 2px solid @blue;
   }
 }
