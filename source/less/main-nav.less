@@ -22,7 +22,7 @@
 .main-nav__link {
   color: @black;
   text-decoration: none;
-  padding-right: 22px;
+  padding-right: 26px;
 
   &:hover {
     color: rgba(0, 0, 0, 0.6);
@@ -37,9 +37,9 @@
   display: flex;
   justify-content: center;
   z-index: 1;
-  padding: 27px 0;
-  border-top: 1px solid #ececec;
-  background-color: #ffffff;
+  padding: 28px 0;
+  border-top: 1px solid @border-gray;
+  background-color: @white;
   position: relative;
 
   &:nth-child(n+3) {
@@ -50,8 +50,8 @@
 .main-nav__logo {
   display: flex;
   justify-content: center;
-  padding: 21px 0 17px 0;
-  background-color: #ffffff;
+  padding: 21px 0 21px 0;
+  background-color: @white;
 }
 
 .logo-img--tablet {
@@ -169,7 +169,7 @@
     width: 370px;
     justify-content: flex-start;
     padding: 23px 0 0 46px;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid @border-gray;
   }
 
   .logo-img--tablet {
@@ -190,13 +190,13 @@
     width: 1150px;
     height: 89px;
     flex-wrap: nowrap;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid @border-gray;
   }
 
 
   .main-nav__logo {
-    width: 297px;
-    padding: 9px 43px 11px 0;
+    width: 295px;
+    padding: 9px 57px 11px 0;
     order: 2;
     border: none;
     justify-content: center;
@@ -222,7 +222,7 @@
     width: 437px;
     display: flex;
     flex-wrap: wrap;
-    background-color: #ffffff;
+    background-color: @white;
   }
 
   .main-nav__user-list {
@@ -238,7 +238,7 @@
 
     &:nth-child(2) {
       padding: 32px 31px;
-      border-left: 1px solid #ececec;
+      border-left: 1px solid @border-gray;
     }
 
     &:nth-child(n+3) {
