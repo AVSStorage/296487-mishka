@@ -1,0 +1,31 @@
+.textarea-block__textarea {
+  .text-in-form();
+  width: 260px;
+  resize: none;
+  font-weight: 400;
+  padding-top: 17px;
+  padding-left: 16px;
+  letter-spacing: 0.5px;
+  height: 145px;
+  border: 2px solid @gray;
+  background-color: @white;
+
+  &:hover,
+  &:active {
+    border: 2px solid #62d1ba;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .textarea-block__textarea {
+    width: 501px;
+    font-size: 19px;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .textarea-block__textarea {
+    width: 700px;
+  }
+}
