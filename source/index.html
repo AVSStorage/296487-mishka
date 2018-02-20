@@ -90,35 +90,43 @@
       <div class="product-preview__wrapper container">
         <div class="product-preview__title-wrapper">
           <h2 class="product-preview__title">Вязаные корзинки</h2>
-          <span class="product-preview__info">Товар недели</span>
+          <span class="product-preview__subtitle">Товар недели</span>
         </div>
-        <p class="product-preview__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="product-preview__table table">
-          <tr class="table__tr">
-            <td class="table__td">Цвет:</td>
-            <td class="table__td">«Тиффани»/серый</td>
-          </tr>
-          <tr class="table__tr">
-            <td class="table__td">Диаметр:</td>
-            <td class="table__td">25 см</td>
-          </tr>
-          <tr class="table__tr">
-            <td class="table__td">Высота:</td>
-            <td class="table__td">15 см</td>
-          </tr>
-        </table>
-        <picture class="product-preview__img">
-          <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
-          <source media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-          <img src="./img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
-        </picture>
-        <span class="product-preview__price">Цена: 990 руб.</span>
-        <a class="button product-preview__order" href="#">
-          <span class="product-preview__order-label">Заказать</span>
-        </a>
+        <div class="product-preview__product-wrapper">
+          <div class="product-preview__info">
+            <p class="product-preview__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="product-preview__table table">
+              <tr class="table__tr">
+                 <td class="table__td">Цвет:</td>
+                 <td class="table__td">«Тиффани»/серый</td>
+              </tr>
+              <tr class="table__tr">
+                <td class="table__td">Диаметр:</td>
+                <td class="table__td">25 см</td>
+               </tr>
+              <tr class="table__tr">
+                 <td class="table__td">Высота:</td>
+                 <td class="table__td">15 см</td>
+              </tr>
+            </table>
+          </div>
+          <div class="product-preview__img">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img src="./img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@1x.jpg 1x, img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            </picture>
+          </div>
+          <div class="product-preview__price">
+            <span class="product-preview__price-text">Цена: 990 руб.</span>
+            <a class="button product-preview__order" href="#">
+              <span class="product-preview__order-label">Заказать</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="advantages">
