@@ -56,14 +56,14 @@
     padding: 0;
     width: 130px;
     height: 52px;
-  }
 
-  &:hover {
-    opacity: 0.6;
-  }
+    &:hover {
+      opacity: 0.6;
+    }
 
-  &:active {
-    opacity: 0.3;
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -84,22 +84,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .reviews {
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 100%;
-      position: absolute;
-      background-image: url("../img/bg-zigzag-line.svg");
-      height: 23px;
-      background-size: auto 15px;
-      bottom: 0;
-      background-position: center center;
-      background-repeat: repeat-x;
-    }
-  }
-
   .reviews__wrapper {
     width: 768px;
     display: flex;
@@ -107,11 +91,24 @@
     padding-left: 44px;
     padding-right: 50px;
     padding-top: 79px;
-    padding-bottom: 142px;
-    margin-bottom: 38px;
+    padding-bottom: 130px;
+    margin-bottom: 47px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 768px;
+      position: absolute;
+      background-image: url("../img/bg-zigzag-line.svg");
+      height: 15px;
+      background-size: auto 15px;
+      bottom: -1px;
+      left: 0;
+      background-position: 28px center;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/review@2x.jpg");
@@ -138,7 +135,7 @@
 
   .reviews__item-text {
     width: 650px;
-    padding: 46px 0 57px;
+    padding: 46px 0 61px;
     font-size: 17px;
     font-weight: 400;
     line-height: 30px;
@@ -170,13 +167,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .reviews {
-    &::after {
-      height: 25px;
-      background-size: auto 19px;
-    }
-  }
-
   .reviews__title {
     font-size: 53px;
     font-weight: 700;
@@ -201,6 +191,15 @@
     padding-bottom: 187px;
     margin-bottom: 130px;
     background-position: 37px 0;
+
+    &::after {
+      content: "";
+      width: 1063px;
+      height: 20px;
+      background-size: auto 20px;
+      bottom: 0;
+      left: 30px;
+    }
   }
 
   .reviews__item-text {

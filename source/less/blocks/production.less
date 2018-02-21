@@ -35,7 +35,7 @@
 
 .production__main {
   order: 3;
-  padding: 24px 40px 33px 33px;
+  padding: 32px 40px 33px 33px;
   border-bottom: 1px solid @border-gray;
   border-right: 1px solid @border-gray;
   border-left: 1px solid @border-gray;
@@ -56,15 +56,18 @@
   left: 79px;
 
   &:hover {
-    width: 121px;
-    height: 92px;
+    transform: scale(1.2);
   }
 
   &:active {
-    width: 81px;
-    height: 62px;
+    transform: scale(0.8);
     opacity: 0.3;
   }
+}
+
+.production__shadow-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .production__descr {
@@ -105,6 +108,7 @@
     margin-bottom: 65px;
   }
 
+
   .production__title {
     margin: 0;
     width: 100%;
@@ -124,7 +128,7 @@
   }
 
   .production__video {
-    order: 1;
+    order: -1;
     width: 668px;
     height: 455px;
     background-image: url("../img/video-tablet@1x.jpg");
@@ -158,9 +162,26 @@
 
 @media (min-width: @desktop-width) {
   .production__wrapper {
-    width: 1076px;
-    align-items: flex-end;
     margin-bottom: 105px;
+    width: 1089px;
+    padding-right: 40px;
+    height: 453px;
+  }
+
+  .production__shadow-wrapper {
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .production__title {
@@ -168,9 +189,9 @@
   }
 
   .production__preview {
-    padding-right: 170px;
-    padding-left: 0;
-    padding-top: 53px;
+    padding-left: 75px;
+    padding-top: 95px;
+    width: 400px;
     border: none;
   }
 
@@ -185,7 +206,9 @@
   .production__main {
     order: 2;
     border: none;
-    padding-right: 30px;
+    padding-bottom: 62px;
+    padding-left: 78px;
+    width: 400px;
   }
 
   .production__order {
@@ -194,16 +217,15 @@
   }
 
   .production__icon {
-    left: 0;
-    top: 0;
+    left: 78px;
+    top: 43px;
   }
 
   .production__video {
+    order: 0;
     width: 682px;
     height: 455px;
-    order: 3;
     align-self: flex-start;
-    margin-top: -434px;
     background-image: url("../img/video-desktop@1x.jpg");
     background-size: 686px auto;
 
@@ -213,7 +235,7 @@
   }
 
   .production__process-play {
-    top: 144px;
-    left: 292px;
+    top: 186px;
+    left: 287px;
   }
 }
