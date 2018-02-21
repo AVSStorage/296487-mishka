@@ -65,6 +65,11 @@
   }
 }
 
+.production__shadow-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .production__descr {
   margin: 0;
   display: block;
@@ -103,6 +108,7 @@
     margin-bottom: 65px;
   }
 
+
   .production__title {
     margin: 0;
     width: 100%;
@@ -122,7 +128,7 @@
   }
 
   .production__video {
-    order: 1;
+    order: -1;
     width: 668px;
     height: 455px;
     background-image: url("../img/video-tablet@1x.jpg");
@@ -156,32 +162,37 @@
 
 @media (min-width: @desktop-width) {
   .production__wrapper {
-    align-items: flex-end;
     margin-bottom: 105px;
     width: 1089px;
     padding-right: 40px;
+    height: 453px;
   }
 
-  .production__wrapper:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  }
+  .production__shadow-wrapper {
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: wrap;
 
-  .production__wrapper:active {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  }
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
 
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
 
   .production__title {
     width: 148px;
   }
 
   .production__preview {
-    padding-left: 80px;
-    padding-top: 97px;
-    width: 368px;
-    border-top: 1px solid @border-gray;
-    border-right: 1px solid @border-gray;
-    margin-top: -456px;
+    padding-left: 75px;
+    padding-top: 91px;
+    width: 400px;
+    border: none;
   }
 
   .production__descr {
@@ -195,11 +206,9 @@
   .production__main {
     order: 2;
     border: none;
-    padding-left: 79px;
-    width: 368px;
     padding-bottom: 62px;
-    border-right: 1px solid @border-gray;
-    border-bottom: 1px solid @border-gray;
+    padding-left: 78px;
+    width: 400px;
   }
 
   .production__order {

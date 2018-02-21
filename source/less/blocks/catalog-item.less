@@ -88,7 +88,7 @@
 @media (min-width: @tablet-width) {
   .catalog-item {
     width: 665px;
-    height: 334px;
+    min-height: 334px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -146,6 +146,8 @@
     flex-direction: column;
     border: none;
     margin-bottom: 0;
+    margin-left: 30px;
+    margin-right: 17px;
   }
 
   .catalog-item:hover .catalog-item__wrapper {
@@ -162,11 +164,16 @@
 
   .catalog-item__wrapper {
     width: 316px;
+    display: block;
     padding-top: 26px;
     padding-bottom: 5px;
     border-left: 1px solid @border-gray;
     border-right: 1px solid @border-gray;
     border-bottom: 1px solid @border-gray;
+  }
+
+  .catalog-item__descr--toys {
+    padding-bottom: 15px;
   }
 
   .catalog-item__link {
