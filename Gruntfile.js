@@ -36,7 +36,8 @@ module.exports = function(grunt) {
           notify: false,
           open: true,
           cors: true,
-          ui: false
+          ui: false,
+          browser: ["Chrome", "firefox", "iexplore"]
         }
       }
     },

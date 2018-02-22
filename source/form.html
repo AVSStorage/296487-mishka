@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link type="text/css" rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -77,17 +78,17 @@
       </p>
     </div>
   </section>
-  <form class="form-main__form" enctype="text/plain" method="post" action="https://echo.htmlacademy.ru">
+  <form class="form-main__form"  method="post" action="https://echo.htmlacademy.ru">
     <section class="radio">
       <div class="radio__wrapper container">
         <h3 class="radio__title">Тип</h3>
         <div class="radio__inputs-wrapper">
           <label class="radio-block">
-            <input class="radio-block__input" aria-label="Аксессуар для интерьера" type="radio" checked>
+            <input class="radio-block__input" aria-label="Аксессуар для интерьера" type="radio" name="Type" value="Accsessory" checked>
             <span class="radio-block__text">Аксессуар для интерьера</span>
           </label>
           <label class="radio-block">
-            <input class="radio-block__input" aria-label="Детская игрушка" type="radio">
+            <input class="radio-block__input" aria-label="Детская игрушка" type="radio" name="Type" value="Toy">
             <span class="radio-block__text">Детская игрушка</span>
           </label>
         </div>
@@ -98,27 +99,27 @@
         <h3 class="checkbox__title">Цвет</h3>
         <div class="checkbox__inputs-wrapper">
           <label class="checkbox-block">
-            <input class="checkbox-block__input" aria-label="Белый цвет" type="checkbox" checked>
+            <input class="checkbox-block__input" aria-label="Белый цвет" type="checkbox" name="White" checked>
             <span class="checkbox-block__text">Белый</span>
           </label>
           <label class="checkbox-block">
-            <input class="checkbox-block__input" aria-label="Серый цвет" type="checkbox" checked>
+            <input class="checkbox-block__input" aria-label="Серый цвет" type="checkbox" name="Gray" checked>
             <span class="checkbox-block__text">Серый</span>
           </label>
           <label class="checkbox-block">
-            <input class="checkbox-block__input" aria-label="Цвет «Тиффани»" type="checkbox">
+            <input class="checkbox-block__input" aria-label="Цвет «Тиффани»" type="checkbox" name="Tiffany">
             <span class="checkbox-block__text">«Тиффани»</span>
           </label>
           <label class="checkbox-block">
-            <input class="checkbox-block__input" aria-label="Черный цвет" type="checkbox">
+            <input class="checkbox-block__input" aria-label="Черный цвет"  type="checkbox" name="Black">
             <span class="checkbox-block__text">Черный</span>
           </label>
           <label class="checkbox-block">
-            <input class="checkbox-block__input" aria-label="Розовый цвет" type="checkbox">
+            <input class="checkbox-block__input" aria-label="Розовый цвет" type="checkbox" name="Pink">
             <span class="checkbox-block__text">Розовый</span>
           </label>
           <label class="checkbox-block">
-            <input class="checkbox-block__input" aria-label="Оранжевый цвет" type="checkbox">
+            <input class="checkbox-block__input" aria-label="Оранжевый цвет" type="checkbox" name="Orange">
             <span class="checkbox-block__text">Оранжевый</span>
           </label>
         </div>
@@ -130,15 +131,15 @@
         <div class="text__inputs-wrapper">
           <label class="text-block">
             <span class="text-block__text">Имя:</span>
-            <input class="text-block__input" aria-label="Имя" type="text" placeholder="Введите ваше имя*">
+            <input class="text-block__input" aria-label="Имя" type="text" placeholder="Введите ваше имя*" name="Name" required>
           </label>
           <label class="text-block">
             <span class="text-block__text ">Фамилия:</span>
-            <input class="text-block__input " aria-label="Фамилия" type="text" placeholder="Укажите фамилию*">
+            <input class="text-block__input " aria-label="Фамилия" type="text" placeholder="Укажите фамилию*" name="Surname" required>
           </label>
           <label class="text-block">
             <span class="text-block__text">Отчество:</span>
-            <input class="text-block__input" aria-label="Отчество" type="text" placeholder="Отчество, если желаете">
+            <input class="text-block__input" aria-label="Отчество" type="text" placeholder="Отчество, если желаете" name="Patronymic" required>
           </label>
         </div>
       </div>
@@ -148,7 +149,7 @@
         <div class="contacts-info__text-wrapper">
           <label class="contacts-info__title" for="number-input">Тел</label>
           <div class="text-block">
-            <input class="text-block__input text-block__input--contacts" aria-label="Телефон" type="tel" id="number-input" placeholder="+7 ХХХ ХХ ХХ*">
+            <input class="text-block__input text-block__input--contacts" aria-label="Телефон" type="tel" id="number-input" placeholder="+7 ХХХ ХХ ХХ*" name="Phone" required>
             <svg class="text-block__icon-number"  width="24.829px" height="24.333px">
               <use xlink:href="img/sprite.svg#icon-phone"></use>
             </svg>
@@ -157,7 +158,7 @@
         <div class="contacts-info__text-wrapper">
           <label class="contacts-info__title" for="mail-input">E-mail</label>
           <div class="text-block">
-            <input class="text-block__input text-block__input--contacts" aria-label="E-mail" type="email" id="mail-input" placeholder="Ваш Email*">
+            <input class="text-block__input text-block__input--contacts" aria-label="E-mail" type="email" id="mail-input" placeholder="Ваш Email*" name="E-mail" required>
             <svg class="text-block__icon-mail"  width="32px" height="32px">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
@@ -171,7 +172,7 @@
         <div class="textarea__input-wrapper">
           <div class="textarea-block">
             <textarea aria-label="Текстовое поле" class="textarea-block__textarea"
-                      placeholder="Опишите все ваши пожелания к заказу" id="textarea-input"></textarea>
+                      placeholder="Опишите все ваши пожелания к заказу" id="textarea-input" name="Wishes"></textarea>
           </div>
         </div>
         <div class="textarea__action-block">

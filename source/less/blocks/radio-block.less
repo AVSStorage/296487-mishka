@@ -31,11 +31,11 @@
   }
 }
 
-.radio-block:hover + .radio-block__text::before {
+.radio-block__input:hover + .radio-block__text::before {
   border: 1px solid @blue;
 }
 
-.radio-block:active + .radio-block__text::before {
+.radio-block__input:active + .radio-block__text::before {
   opacity: 0.3;
 }
 
@@ -59,12 +59,13 @@
 
 @media (min-width: @tablet-width) {
   .radio-block {
+    padding-left: 66px;
     margin-bottom: 43px;
   }
 
   .radio-block__text {
     width: 100%;
-    margin-left: 68px;
+    margin-left: 0;
     margin-top: 15px;
     font-size: 19px;
     font-weight: 700;
@@ -84,7 +85,7 @@
       width: 20px;
       height: 20px;
       top: 15px;
-      left: 15px;
+      left: 14px;
       position: absolute;
       background-color: @blue;
       border-radius: 50%;

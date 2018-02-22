@@ -11,7 +11,7 @@
 
 .text-block__input {
   .text-in-form();
-  color: rgba(0, 0, 0, 0.2);
+  color: @gray;
   border: none;
   height: 50px;
   box-shadow: inset 0 -2px 0 @gray;
@@ -26,6 +26,26 @@
   &:focus {
     border: none;
   }
+}
+
+.text-block:hover {
+  .text-block__icon-number,
+  .text-block__icon-mail {
+    fill: @blue;
+    opacity: 1;
+  }
+}
+
+.text-block:active {
+  .text-block__icon-number,
+  .text-block__icon-mail {
+    fill: @blue;
+    opacity: 1;
+  }
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .text-block__input--contacts {
@@ -115,6 +135,6 @@ input::placeholder {
     font-size: 19px;
     font-weight: 700;
     line-height: 18px;
-    padding-right: 25px;
+    padding-right: 27px;
   }
 }

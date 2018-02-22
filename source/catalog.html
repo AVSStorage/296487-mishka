@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link type="text/css" rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -54,7 +55,7 @@
           </a>
         </li>
         <li class="user-list__item user-list__item--basket">
-          <a class="user-list__link">Корзина:пока пуста</a>
+          <a class="user-list__link">Корзина: пока пуста</a>
           <svg class="user-list__icon" width="20px" height="18px"  >
             <use xlink:href="img/sprite.svg#icon-cart"></use>
           </svg>
@@ -67,7 +68,7 @@
   <section class="promo">
     <div class="promo__wrapper container">
       <span class="promo__shipping">Бесплатная доставка по России</span>
-        <h2 class="promo__title ">Каталог товаров</h2>
+        <h2 class="promo__title promo__title--catalog">Каталог товаров</h2>
       </div>
   </section>
   <section class="catalog">
@@ -177,18 +178,20 @@
     </div>
   </section>
   <section class="modal visually-hidden">
-    <p class="modal__info">
-      <span class="modal__label">Добавить в корзину</span>
-      <span class="modal__check-size">Выберите размер:</span>
-    </p>
-    <div class="modal__buttons">
-      <button class="modal__size" autofocus>S</button>
-      <button class="modal__size">M</button>
-      <button class="modal__size">L</button>
+    <div class="modal__wrapper">
+      <p class="modal__info">
+        <span class="modal__label">Добавить в корзину</span>
+        <span class="modal__check-size">Выберите размер:</span>
+      </p>
+      <div class="modal__buttons">
+        <button class="modal__size" autofocus>S</button>
+        <button class="modal__size">M</button>
+        <button class="modal__size">L</button>
+      </div>
+      <a class="modal__buy button" href="#">
+        <span class="modal__buy-label">Добавить</span>
+      </a>
     </div>
-    <a class="modal__buy button" href="#">
-      <span class="modal__buy-label">Добавить</span>
-    </a>
   </section>
 </main>
 <footer class="page-footer">
@@ -234,5 +237,6 @@
   </div>
 </footer>
 <script src="js/picturefill.js"></script>
+<script src="js/svgxuse.js"></script>
 </body>
 </html>
