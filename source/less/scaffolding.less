@@ -19,3 +19,27 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+input::-ms-clear {
+  display: none;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+input:-ms-input-placeholder {
+  color: #c7c7c7;
+}
+
+textarea:-ms-input-placeholder {
+  color: #c7c7c7;
+}
+
+.textarea:active {
+  color: @gray;
+}
+
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
